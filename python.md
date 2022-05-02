@@ -96,11 +96,45 @@ from dataclasses import dataclass
 # Dataclasses have automatic constructors
 @dataclass
 class Person:
-    name: str
+	name: str
 	age: int
 ```
 
-## Random Numbers
+## Common Tasks
+
+### List Manipulation
+
+```python
+xs = [1, 2, 3, 4]
+
+# Create a new sorted list
+ys = sorted(xs)
+
+# Sort in place
+xs.sort()
+
+assert xs == ys
+
+# Reverse in place
+xs.reverse()
+```
+
+### String Manipulation
+
+```python
+# Create a string
+s1 = 'hi there'
+
+# Split string
+xs = s1.split(' ')
+
+# Join string
+s2 = ' '.join(xs)
+
+assert s1 == s2
+```
+
+### Generating Random Numbers
 
 ```python
 
@@ -116,5 +150,3 @@ y = random.random()
 # Random choice
 x = random.choice([1, 2])
 ```
-
-## 
