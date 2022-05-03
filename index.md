@@ -8,10 +8,10 @@ It's easier to put it all in one place than search around for docs every time yo
 
 | Languages |
 | --------- |
-| [C](wesjenkins.github.io/c) |
-| [C++](wesjenkins.github.io/cpp) |
-| [D](wesjenkins.github.io/d) |
-| [Javascript](wesjenkins.github.io/javascript) |
-| [Julia](wesjenkins.github.io/julia) |
-| [Lua](wesjenkins.github.io/lua) |
-| [Python](wesjenkins.github.io/python) |
+| [C](https://wesjenkins.github.io/c) |
+| [C++](https://wesjenkins.github.io/cpp) |
+| [D](https://wesjenkins.github.io/d) |
+| [Javascript](https://wesjenkins.github.io/javascript) |
+| [Julia](https://wesjenkins.github.io/julia) |
+| [Lua](https://wesjenkins.github.io/lua) |
+| [Python](https://wesjenkins.github.io/python) |
