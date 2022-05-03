@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Welcome to my Coding Handbook
 
-You can use the [editor on GitHub](https://github.com/wesjenkins/wesjenkins.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+This page is designed to give somewhat brief overviews of as many languages as possible.
+The idea is that these pages are are for quickly getting up to speed with a language you haven't used in a while.
+(By you, I mostly mean me. These pages are mostly for me when I need to remember some feature I haven't used in a while)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It's easier to put it all in one place than search around for docs every time you forget.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wesjenkins/wesjenkins.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+| Languages |
+| --------- |
+| [C](wesjenkins.github.io/c) |
+| [C++](wesjenkins.github.io/cpp) |
+| [D](wesjenkins.github.io/d) |
+| [Javascript](wesjenkins.github.io/javascript) |
+| [Julia](wesjenkins.github.io/julia) |
+| [Lua](wesjenkins.github.io/lua) |
+| [Python](wesjenkins.github.io/python) |
