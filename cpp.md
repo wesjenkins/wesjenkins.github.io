@@ -139,9 +139,15 @@ int main(void) {
 ```cpp
 #include <cassert>
 
-class Base {}
+class Base {
+public:
+    virtual ~Base() {}
+};
 
-class Child : Base {}
+class Child : public Base {
+public:
+    virtual ~Child() {}
+};
 
 int main() {
 	// Create an integer
@@ -163,7 +169,9 @@ int main() {
 	Base* ptr = new Child();
 
 	// Dynamic cast back to child
-	Child* ptr2 = dynamic_cast<Child*>(ptr):
+	Child* ptr2 = dynamic_cast<Child*>(ptr);
+	// Note: dynamic_cast only works when it has at least
+	//       one virtual method!
 	
 	// And it will be null if it's the wrong type
 	assert(ptr2 != nullptr);

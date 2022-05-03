@@ -131,7 +131,7 @@ int main(void) {
 	// Of course, not true for all integers
 	
 	// Widening conversions are implicit
-	long y = x;
+	long lx = x;
 	double d = y;
 	
 	// And all pointers implicitly cast to void*
