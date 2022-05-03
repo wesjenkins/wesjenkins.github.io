@@ -69,6 +69,10 @@ int main(void) {
 	// Pointer to an integer
 	int* p = &x;
 	
+	// Static array of integers
+	int xs[3] = { 1, 2, 3 };
+	int ys[]  = { 4, 5, 6 };
+	
 	return 0;
 }
 ```
@@ -147,6 +151,61 @@ int main(void) {
 	
 	return 0;
 }
+```
+
+### File IO
+
+```c
+// Read an entire file into a buffer
+// by trying to first determine its size
+char* read_file(char* filename) {
+	// Open a file in "binary" mode for reading
+	// (Binary only means anything on Windows)
+	FILE* fp = fopen(filename, "rb");
+	
+	// Seek to the end of the file
+	fseek(fp, 0, SEEK_END);
+	// (0 is the offset from SEEK_END, so it's the exact end)
+	
+	// Get the current file position,
+	// which should be the size of the file
+	size_t size = ftell(fp);
+	
+	// And allocate a buffer to hold it
+	char* buff = (char*)malloc(size);
+	
+	// Then reset the file to the very beginning
+	rewind(fp);
+	// Or: fseek(fp, 0, SEEK_SET);
+	
+	// Then read that number of bytes from the file
+	fread(buff, 1, size, fp);
+	// Remember, args to fread are:
+	// (buffer, element size, element count, file pointer)
+	
+	// Close the file
+	fclose(fp);
+	// Remember to close files!
+	
+	// Return buffer, but remember to eventually free it
+	return buff;
+}
+
+void write_file(char* filename, char* buff, size_t size) {
+	// Open a file in "binary" mode for writing
+	// (Binary only means anything on Windows)
+	FILE* fp = fopen(filename, "wb");
+	
+	// Then write to that file
+	fwrite(buff, 1, size, fp);
+	// Remember, args to fwrite are:
+	// (buffer, element size, element count, file pointer)
+	
+	// Close the file
+	fclose(filename);
+	// Remember to close files!
+}
+
 ```
 
 ### Variable arguments
