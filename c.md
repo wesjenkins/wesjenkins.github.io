@@ -112,6 +112,35 @@ int main(void) {
 
 ## Common Tasks
 
+### Type casting
+
+```
+#include <assert.h>
+
+int main(void) {
+	// Create an integer
+	int x = 3;
+	
+	// Cast to float
+	float y = (float)x;
+	
+	// Cast back to int
+	int x2 = (int)y;
+	
+	assert(x == x2);
+	// Of course, not true for all integers
+	
+	// Widening conversions are implicit
+	long y = x;
+	double d = y;
+	
+	// And all pointers implicitly cast to void*
+	void* p = &y;
+	
+	return 0;
+}
+```
+
 ### Memory management
 
 ```c

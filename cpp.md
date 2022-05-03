@@ -134,6 +134,44 @@ int main(void) {
 
 ## Common Tasks
 
+### Type Casting
+
+```cpp
+#include <cassert>
+
+class Base {}
+
+class Child : Base {}
+
+int main() {
+	// Create an integer
+	int x = 3;
+	
+	// Cast to float
+	float y = static_cast<float>(x);
+	
+	// Cast back to int
+	int x2 = static_cast<int>(y);
+	
+	assert(x == x2);
+	// Of course, not true for all integers
+	
+	// Reinterpret the same int bit pattern as a float
+	float z = reinterpret_cast<float&>(x);
+	
+	// Pointers implicitly convert to parent class
+	Base* ptr = new Child();
+
+	// Dynamic cast back to child
+	Child* ptr2 = dynamic_cast<Child*>(ptr):
+	
+	// And it will be null if it's the wrong type
+	assert(ptr2 != nullptr);
+	
+	return 0;
+}
+```
+
 ### Memory management
 
 ```cpp
