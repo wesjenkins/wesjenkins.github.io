@@ -1,4 +1,4 @@
-# Python
+# Javascript
 
 ## Necessary Information
 
