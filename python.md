@@ -102,6 +102,27 @@ class Person:
 
 ## Common Tasks
 
+### Type Casting
+
+```python
+# Conversions to string
+s1 = str(5)
+s2 = str(1.0)
+s3 = str([1, 2])
+s4 = str((1, 2))
+
+# And conversions back
+i = int(s1)
+f = float(s2)
+# l = list(s3)  # This one doesn't work
+# t = tuple(s4) # Nor does this one
+# Would have to parse them back into their original forms
+
+# Conversions between numeric types
+f = float(i)
+i = int(f)
+```
+
 ### List Manipulation
 
 ```python
@@ -132,6 +153,48 @@ xs = s1.split(' ')
 s2 = ' '.join(xs)
 
 assert s1 == s2
+```
+
+### File IO
+
+```python
+# Open a file and automatically close it using with
+# Open a file for reading
+with open("textfile.txt", "r") as textfile:
+	# Read textfile into text
+	text = textfile.read()
+
+# Open a file for writing
+with open("otherfile.txt", "w") as textfile:
+	# Write earlier result
+	textfile.write(text)
+```
+
+### Variable arguments
+
+```python
+# Declare a function accepting any number of arguments
+# The arguments can be of any type
+def printIntegers(vals*):
+	# vals is going to be a tuple
+	assert typeof(vals) == tuple
+	
+	# Iterate over the tuple
+	for val in vals:
+		# And print each argument
+		print(val)
+
+# Call just like a normal function
+printIntegers(1, 2)
+printIntegers(3, 4, 5)
+
+# Create a tuple
+tup = (1, 2, 3)
+
+# Expand the tuple as separate arguments
+printIntegers(*tup, 4)
+# Note that this is possible for any function
+# even ones that are not variable argument
 ```
 
 ### Generating Random Numbers
