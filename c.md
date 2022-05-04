@@ -114,7 +114,7 @@ int main(void) {
 
 ### Type casting
 
-```
+```c
 #include <assert.h>
 
 int main(void) {
