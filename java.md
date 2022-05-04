@@ -49,20 +49,20 @@ public class Main {
 		Integer x_box = new Integer(x);
 		
 		assert x == x_box.intValue();
-	    
-	    long w = 13;
-	    Long w_box = new Long(w);
+		
+		long w = 13;
+		Long w_box = new Long(w);
 		
 		assert w == w_box.longValue();
-	    
+		
 		// Floats and doubles
-	    float y = 1.0f;
-	    Float y_box = new Float(y);
+		float y = 1.0f;
+		Float y_box = new Float(y);
 		
 		assert y == y_box.floatValue();
-	    
-	    double z = 1.0;
-	    Double z_box = new Double(z);
+		
+		double z = 1.0;
+		Double z_box = new Double(z);
 		
 		assert z == z_box.doubleValue();
 		
@@ -172,7 +172,7 @@ public class Main
 		// (A bit overkill, but a good example of how it works)
 		List<Integer> list = Arrays.stream(arr)
 		                           .boxed()
-								   .collect(Collectors.toList());
+		                           .collect(Collectors.toList());
 		
 		// Add a new integer to the end
 		list.add(new Integer(5));
