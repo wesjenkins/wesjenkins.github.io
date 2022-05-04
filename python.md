@@ -43,8 +43,8 @@ x = 3
 assert type(x) == int
 
 # Float
-x = 6
-assert type(y) == float
+x = 6.0
+assert type(x) == float
 
 # Boolean
 x = True
