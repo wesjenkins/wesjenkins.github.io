@@ -102,7 +102,7 @@ end
 # To string
 s1 = 5.to_s
 s2 = 1.0.to_s
-s3 = [1, 2].so_s
+s3 = [1, 2].to_s
 
 # And conversions back
 i = s1.to_i
