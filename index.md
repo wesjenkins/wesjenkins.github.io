@@ -10,8 +10,12 @@ It's easier to put it all in one place than search around for docs every time yo
 | --------- |
 | [C](https://wesjenkins.github.io/c) |
 | [C++](https://wesjenkins.github.io/cpp) |
+| [C#](https://wesjenkins.github.io/cs) |
 | [D](https://wesjenkins.github.io/d) |
+| [Java](https://wesjenkins.github.io/java) |
 | [Javascript](https://wesjenkins.github.io/javascript) |
 | [Julia](https://wesjenkins.github.io/julia) |
 | [Lua](https://wesjenkins.github.io/lua) |
 | [Python](https://wesjenkins.github.io/python) |
+| [Ruby](https://wesjenkins.github.io/ruby) |
+| [Rust](https://wesjenkins.github.io/rust) |
