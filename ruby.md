@@ -154,7 +154,7 @@ raise RuntimeError unless s1 == s2
 data1 = ""
 File.open("in.txt", "r") do |f|
 	# Read data
-	data = f.read
+	data1 = f.read
 end
 
 # Or just do this one-liner
