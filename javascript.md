@@ -33,6 +33,13 @@ function sayHello() {
 	while (x > 0) {
 		x -= 1;
 	}
+	
+	obj = { a: 1, b: 2 };
+	
+	// for..of loop
+	for (const [key, val] of obj) {
+		console.log(key, " = ", val);
+	}
 }
 ```
 
