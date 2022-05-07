@@ -34,6 +34,7 @@ function sayHello() {
 		x -= 1;
 	}
 	
+	// Create object
 	obj = { a: 1, b: 2 };
 	
 	// for..of loop
@@ -66,6 +67,96 @@ console.assert(typeof(x) == "object")
 
 x = {x: 1, y: 2}
 console.assert(typeof(x) == "object")
+
+// undefined
+x = undefined;
+
+// undefined is the result when a key doesn't exist
+console.assert(x === {1: 3}[5]);
+```
+
+### Old-Style Classes
+
+```js
+function Vec(x, y, z) {
+	return {
+		x: x,
+		y: y,
+		z: z,
+		
+		// (I have no idea when this syntax was introduced)
+		// (Shorthand for add: function(rhs) { ... })
+		add(rhs) {
+			return Vec(this.x + rhs.x, this.y + rhs.y, this.z + rhs.z);
+		},
+		
+		dot(rhs) {
+			return this.x * rhs.x + this.y * rhs.y + this.z * rhs.z;
+		}
+	};
+}
+```
+
+### New-Style Classes (ES6)
+
+```js
+class Vec {
+	// Constructor method
+	constructor(x, y, z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+	
+	// Overload to string
+	toString() {
+		// Interpolated string
+		return `(${this.x}, ${this.y}, ${this.z})`;
+	}
+	
+	// No fancy operator overloading
+	add(rhs) {
+		return new Vec(this.x + rhs.x, this.y + rhs.y, this.z + rhs.z);
+	}
+	
+	dot(rhs) {
+		return this.x * rhs.x + this.y * rhs.y + this.z * rhs.z;
+	}
+}
+
+let v1 = new Vec(1, 2, 3);
+let v2 = new Vec(4, 5, 6);
+
+let v3 = v1.add(v2);
+
+let dot = v1.dot(v3);
+```
+
+### Proxy Objects
+
+```js
+let data = {x: 1, y: 2};
+
+// Proxy objects
+// Similar to Lua metatables
+let p = new Proxy(data, {
+	// Customize get behavior
+	get(obj, prop) {
+		// If it exists, return it using Reflect
+		if (data[obj] !== undefined)
+			return Reflect.get(obj, prop);
+		else
+			return 0;
+		// But default to 0
+	},
+	
+	// Customize set behavior
+	set(obj, prop, newval) {
+		// Only allow setting if it already exists
+		if (data[obj] !== undefined)
+			Reflect.set(obj, prop, newval);
+	},
+});
 ```
 
 ## Common Tasks
