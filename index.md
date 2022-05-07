@@ -6,7 +6,7 @@ The idea is that these pages are are for quickly getting up to speed with a lang
 
 It's easier to put it all in one place than search around for docs every time you forget.
 
-| Languages |
+| Languages | |
 | ----|---- |
 | [C](https://wesjenkins.github.io/c) |
 | [C++](https://wesjenkins.github.io/cpp) |
