@@ -79,22 +79,25 @@ console.assert(x === {1: 3}[5]);
 
 ```js
 function Vec(x, y, z) {
-	return {
-		x: x,
-		y: y,
-		z: z,
-		
-		// (I have no idea when this syntax was introduced)
-		// (Shorthand for add: function(rhs) { ... })
-		add(rhs) {
-			return Vec(this.x + rhs.x, this.y + rhs.y, this.z + rhs.z);
-		},
-		
-		dot(rhs) {
-			return this.x * rhs.x + this.y * rhs.y + this.z * rhs.z;
-		}
-	};
+	this.x = x;
+	this.y = y;
+	this.z = z;
 }
+
+Vec.prototype.add = function(rhs) {
+	return Vec(this.x + rhs.x, this.y + rhs.y, this.z + rhs.z);
+}
+
+Vec.prototype.dot = function(rhs) {
+	return this.x * rhs.x + this.y * rhs.y + this.z * rhs.z;
+}
+
+let v1 = new Vec(1, 2, 3);
+let v2 = new Vec(4, 5, 6);
+
+let v3 = v1.add(v2);
+
+let dot = v1.dot(v3);
 ```
 
 ### New-Style Classes (ES6)
