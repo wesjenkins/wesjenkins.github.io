@@ -42,7 +42,8 @@ public class Main
 ### Built-in Types
 
 ```java
-public class Main {
+public class Main
+{
 	public static void main(String[] args) {
 		// Integers and longs
 		int x = 1;
@@ -92,7 +93,7 @@ class Vector
 		this.z = z;
 	}
 	
-	public override toString() {
+	public override String toString() {
 		return String.format("(%d, %d, %d)", x, y, z);
 	}
 	
