@@ -7,14 +7,14 @@ The idea is that these pages are are for quickly getting up to speed with a lang
 It's easier to put it all in one place than search around for docs every time you forget.
 
 | Languages |
-| --------- |
+| ----|---- |
 | [C](https://wesjenkins.github.io/c) |
 | [C++](https://wesjenkins.github.io/cpp) |
 | [C#](https://wesjenkins.github.io/cs) |
 | [D](https://wesjenkins.github.io/d) |
 | [Java](https://wesjenkins.github.io/java) |
-| [Javascript](https://wesjenkins.github.io/javascript) |
-| [Julia](https://wesjenkins.github.io/julia) |
+| [Javascript](https://wesjenkins.github.io/javascript) | [Node.JS](https://wesjenkins.github.io/javascript/node) |
+| [Julia](https://wesjenkins.github.io/julia) | [Packages](https://wesjenkins.github.io/julia/packages) |
 | [Lua](https://wesjenkins.github.io/lua) |
 | [Python](https://wesjenkins.github.io/python) |
 | [Ruby](https://wesjenkins.github.io/ruby) |
